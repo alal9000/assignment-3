@@ -5,10 +5,6 @@ body {
 }
 
 main {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  overflow: auto;
   width: 100%;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -35,40 +31,12 @@ header h1 {
   font-size: 2em;
 }
 
-/* Navigation */
-
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 2em;
-  line-height: 2em;
-  margin: 20px 0px;
-}
-
-ul {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-a {
-  display: block;
-  width: 6em;
-  text-decoration: none;
-  color: white;
-  background-color: green;
-  border-right: 1px solid white;
-  padding: 5px;
-  text-align: center;
-}
-
-a:hover {
-  background-color: grey;
-}
-
 /* Layout */
+
+.container {
+  flex-direction: row;
+  display: flex;
+}
 
 article section {
   text-align: left;
@@ -78,6 +46,7 @@ article section {
 article {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   flex: 1 1 75%;
   padding: 10px;
 }
@@ -96,10 +65,44 @@ footer {
   text-align: center;
 }
 
+/* Navigation */
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2em;
+  line-height: 2em;
+  margin: 20px 0px;
+}
+
+nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+nav ul a {
+  display: block;
+  width: 6em;
+  text-decoration: none;
+  color: white;
+  background-color: green;
+  border-right: 1px solid white;
+  padding: 5px;
+  text-align: center;
+}
+
+nav ul a:hover {
+  background-color: grey;
+}
+
 /* Forms */
 form {
   max-width: 600px;
   margin: auto;
+  margin-bottom: 20px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;

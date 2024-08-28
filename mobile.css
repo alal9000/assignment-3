@@ -1,12 +1,41 @@
 /* General Styles */
 body {
   font-family: Arial, sans-serif;
-  margin: 10px;
+  margin: 20px;
 }
 
 main {
   width: 100%;
-  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+header,
+nav,
+article,
+aside,
+footer {
+  border-style: solid;
+  border-color: #4caf50;
+  border-radius: 25px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  height: auto;
+}
+
+/* Layout */
+article,
+aside {
+  width: 100%;
+}
+
+footer {
+  margin-top: 10px;
+  text-align: center;
 }
 
 /* Navigation */
@@ -17,7 +46,7 @@ nav {
   margin: 10px 0px;
 }
 
-ul {
+nav ul {
   float: none;
   width: 100%;
   padding: 0;
@@ -25,7 +54,7 @@ ul {
   list-style-type: none;
 }
 
-a {
+nav ul a {
   float: none;
   width: 100%;
   text-align: center;
@@ -35,8 +64,8 @@ a {
   padding: 10px 0;
 }
 
-a:hover {
-  background-color: #2288ff;
+nav ul a:hover {
+  background-color: grey;
 }
 
 nav ul {
@@ -49,30 +78,9 @@ nav ul {
   background-color: green;
 }
 
-header,
-nav,
-article,
-aside,
-footer {
-  border-style: solid;
-  padding: 5px;
-}
-
 header h1 {
   text-align: center;
   font-size: 1.5em;
-}
-
-/* Layout */
-article,
-aside {
-  float: none;
-  width: 100%;
-}
-
-footer {
-  margin-top: 10px;
-  text-align: center;
 }
 
 /* Forms */
@@ -80,8 +88,8 @@ form {
   max-width: 100%;
   margin: auto;
   padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid green;
+  border-radius: 25px;
   box-shadow: none;
 }
 
@@ -90,8 +98,8 @@ input[type='email'],
 textarea {
   width: 100%;
   padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid green;
+  border-radius: 25px;
   box-sizing: border-box;
 }
 
@@ -99,7 +107,7 @@ input[type='submit'],
 input[type='reset'] {
   padding: 8px 10px;
   border: none;
-  border-radius: 4px;
+  border-radius: 25px;
   background-color: #4caf50;
   color: white;
   cursor: pointer;
@@ -123,7 +131,7 @@ th,
 td {
   padding: 10px;
   text-align: center;
-  border: 1px solid #ddd;
+  border: 1px solid green;
 }
 
 thead {
