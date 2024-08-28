@@ -1,7 +1,15 @@
 /* General Styles */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: Arial, sans-serif;
+  color: #333;
   margin: 20px;
+  box-sizing: border-box;
 }
 
 main {
@@ -27,10 +35,16 @@ footer {
   height: auto;
 }
 
+header h1 {
+  text-align: center;
+  font-size: 2.2em;
+}
+
 /* Layout */
 article,
 aside {
   width: 100%;
+  margin-top: 20px;
 }
 
 footer {
@@ -41,27 +55,30 @@ footer {
 /* Navigation */
 
 nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 2em;
   line-height: 2em;
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
 
 nav ul {
-  float: none;
-  width: 100%;
+  display: flex;
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
 nav ul a {
-  float: none;
-  width: 100%;
-  text-align: center;
+  display: block;
+  width: 6em;
   text-decoration: none;
   color: white;
   background-color: green;
-  padding: 10px 0;
+  border-right: 1px solid white;
+  padding: 5px;
+  text-align: center;
 }
 
 nav ul a:hover {
@@ -78,19 +95,13 @@ nav ul {
   background-color: green;
 }
 
-header h1 {
-  text-align: center;
-  font-size: 1.5em;
-}
-
 /* Forms */
 form {
   max-width: 100%;
   margin: auto;
   padding: 15px;
-  border: 1px solid green;
-  border-radius: 25px;
-  box-shadow: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 input[type='text'],
@@ -98,8 +109,8 @@ input[type='email'],
 textarea {
   width: 100%;
   padding: 8px;
-  border: 1px solid green;
-  border-radius: 25px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   box-sizing: border-box;
 }
 
@@ -107,7 +118,7 @@ input[type='submit'],
 input[type='reset'] {
   padding: 8px 10px;
   border: none;
-  border-radius: 25px;
+  border-radius: 4px;
   background-color: #4caf50;
   color: white;
   cursor: pointer;
@@ -124,7 +135,6 @@ table {
   width: 100%;
   margin: 10px auto;
   border-collapse: collapse;
-  box-shadow: none;
 }
 
 th,
@@ -155,13 +165,12 @@ caption {
   color: #333;
 }
 
-/* Images */
+/* Images and Animations */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* Animations */
 #profile {
   opacity: 0;
   animation: fadeIn 1.5s ease-in forwards;
@@ -176,10 +185,10 @@ img {
   }
 }
 
-/* Adjustments for smaller screens */
+/* media queries for smaller screens */
 @media only screen and (max-width: 600px) {
   header h1 {
-    font-size: 1.2em;
+    font-size: 2.5em;
   }
 
   a {
